@@ -1,4 +1,4 @@
-import type { Point } from './types';
+import type { Point } from '../types';
 
 export function bezierOne(): void {
   const canvas = document.getElementById('canvas') as HTMLCanvasElement;
