@@ -1,8 +1,8 @@
 {
-  "name": "typescript-webpack-boilerplate",
+  "name": "canvas_maths",
   "version": "1.0.0",
   "private": false,
-  "description": "A starter template/boilerplate built with TypeScript/JavaScript, Babel, Webpack 5, PostCSS, Jest, ESLint, and Stylelint.",
+  "description": "Canvas Maths",
   "keywords": [
     "Babel",
     "Boilerplate",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/WFItzhenry/typescript_starter.git"
+    "url": "https://github.com/WFItzhenry/canvas_maths.git"
   },
   "license": "MIT",
   "author": "Warren Fitzhenry",

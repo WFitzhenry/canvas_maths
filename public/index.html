@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-    <!-- Title -->
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #canvasContainer {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
   </head>
-
   <body>
-    <!-- No script message -->
-    <noscript>
-      <strong>
-        We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
-        properly without JavaScript enabled. Please enable it to continue.
-      </strong>
-    </noscript>
-    <!-- No script message end -->
-
-    <!-- Root -->
-    <div id="root" class="root"></div>
-    <!-- Root end -->
+    <div id="canvasContainer">
+      <canvas id="canvas"></canvas>
+      <div class="dropdown">
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+    </div>
   </body>
 </html>
