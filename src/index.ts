@@ -1,6 +1,7 @@
 // Import helpers.
 import { bezierOne } from './examples/bezier_one';
 import { lissajous } from './examples/lissajous_curves';
+import { circlePacking } from './examples/circle_packing';
 import { cancelAllAnimations } from './examples/utils';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedValue === 'lissajous') {
       lissajous();
+    }
+
+    if (selectedValue === 'circlepacking') {
+      circlePacking();
     }
   });
 
