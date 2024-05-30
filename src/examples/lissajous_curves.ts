@@ -49,6 +49,14 @@ export function lissajous(): void {
   function draw(): void {
     context.clearRect(0, 0, width, height);
     bees.forEach(updateAndDrawBee);
-    requestAnimationFrame(draw);
+    animationFrameId = requestAnimationFrame(draw);
+  }
+}
+
+let animationFrameId: number | null = null;
+export function cancelAnimationLissajous(): void {
+  if (animationFrameId !== null) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
   }
 }
