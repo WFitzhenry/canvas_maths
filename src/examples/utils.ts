@@ -1,5 +1,6 @@
 import { cancelAnimationKinematicArm } from './kinematic_arm';
 import { cancelAnimationKinematicArmDrawing } from './kinematic_arm_drawing';
+import { cancelAnimationKinematicWalkDrawing } from './kinematic_walk';
 import { cancelAnimationLissajous } from './lissajous_curves';
 
 export function cancelAllAnimations(): void {
@@ -9,4 +10,5 @@ export function cancelAllAnimations(): void {
   cancelAnimationLissajous();
   cancelAnimationKinematicArm();
   cancelAnimationKinematicArmDrawing();
+  cancelAnimationKinematicWalkDrawing();
 }

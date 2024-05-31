@@ -70,7 +70,7 @@ export function kinematicArmDrawing(): void {
   if (!context) {
     throw new Error('Canvas context not available');
   }
-  console.log(window.innerWidth);
+
   canvas2.width = window.innerWidth;
   canvas2.height = window.innerHeight;
 

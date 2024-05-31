@@ -6,6 +6,7 @@ import { kinematicArm } from './examples/kinematic_arm';
 import { forceDirectedLayout } from './examples/force_directed_layout';
 import { cancelAllAnimations } from './examples/utils';
 import { kinematicArmDrawing } from './examples/kinematic_arm_drawing';
+import { kinematicWalk } from './examples/kinematic_walk';
 
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.getElementById(
@@ -39,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedValue === 'kinematicarmdrawing') {
       kinematicArmDrawing();
+    }
+
+    if (selectedValue === 'kinematicwalk') {
+      kinematicWalk();
     }
   });
 
