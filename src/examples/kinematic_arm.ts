@@ -93,8 +93,16 @@ export function kinematicArm(): void {
     arm.render(context);
     arm2.render(context);
     arm3.render(context);
-    requestAnimationFrame(draw);
+    animationFrameId = requestAnimationFrame(draw);
   }
 
   draw();
+}
+
+let animationFrameId: number | null = null;
+export function cancelAnimationKinematicArm(): void {
+  if (animationFrameId !== null) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
+  }
 }
