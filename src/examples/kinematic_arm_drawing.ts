@@ -59,15 +59,20 @@ class Arm implements IArm {
   }
 }
 
-export function kinematicArm(): void {
+export function kinematicArmDrawing(): void {
   const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+  const canvas2 = document.getElementById('canvas2') as HTMLCanvasElement;
   if (!canvas) {
     throw new Error('Canvas element not found');
   }
   const context = canvas.getContext('2d') as CanvasRenderingContext2D;
+  const context2 = canvas2.getContext('2d') as CanvasRenderingContext2D;
   if (!context) {
     throw new Error('Canvas context not available');
   }
+  console.log(window.innerWidth);
+  canvas2.width = window.innerWidth;
+  canvas2.height = window.innerHeight;
 
   const width = (canvas.width = window.innerWidth);
   const height = (canvas.height = window.innerHeight);
@@ -79,12 +84,16 @@ export function kinematicArm(): void {
 
   arm2.parent = arm;
   arm3.parent = arm2;
+  context2.lineWidth = 0.25;
 
   function draw(): void {
+    context2.beginPath();
+    context2.moveTo(arm3.getEndX(), arm3.getEndY());
+
     context.clearRect(0, 0, width, height);
-    arm.angle = Math.sin(angle) * 1.2;
-    arm2.angle = Math.cos(angle * 0.5) * 0.92;
-    arm3.angle = Math.sin(angle * 1.5) * 1.34;
+    arm.angle = Math.sin(angle) * 2.476;
+    arm2.angle = Math.cos(angle * 0.502 + 2) * 2.92;
+    arm3.angle = Math.sin(angle * 1.498 - 0.5) * 2.34;
     arm2.x = arm.getEndX();
     arm2.y = arm.getEndY();
     arm3.x = arm2.getEndX();
@@ -93,6 +102,10 @@ export function kinematicArm(): void {
     arm.render(context);
     arm2.render(context);
     arm3.render(context);
+
+    context2.lineTo(arm3.getEndX(), arm3.getEndY());
+    context2.stroke();
+
     animationFrameId = requestAnimationFrame(draw);
   }
 
@@ -100,7 +113,7 @@ export function kinematicArm(): void {
 }
 
 let animationFrameId: number | null = null;
-export function cancelAnimationKinematicArm(): void {
+export function cancelAnimationKinematicArmDrawing(): void {
   if (animationFrameId !== null) {
     cancelAnimationFrame(animationFrameId);
     animationFrameId = null;

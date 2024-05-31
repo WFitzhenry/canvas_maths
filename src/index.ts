@@ -5,6 +5,7 @@ import { circlePacking } from './examples/circle_packing';
 import { kinematicArm } from './examples/kinematic_arm';
 import { forceDirectedLayout } from './examples/force_directed_layout';
 import { cancelAllAnimations } from './examples/utils';
+import { kinematicArmDrawing } from './examples/kinematic_arm_drawing';
 
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.getElementById(
@@ -34,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedValue === 'kinematicarm') {
       kinematicArm();
+    }
+
+    if (selectedValue === 'kinematicarmdrawing') {
+      kinematicArmDrawing();
     }
   });
 
