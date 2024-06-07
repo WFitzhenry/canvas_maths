@@ -7,6 +7,7 @@ import { forceDirectedLayout } from './examples/force_directed_layout';
 import { cancelAllAnimations } from './examples/utils';
 import { kinematicArmDrawing } from './examples/kinematic_arm_drawing';
 import { kinematicWalk } from './examples/kinematic_walk';
+import { kinematicReach } from './examples/kinematic_reach';
 
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.getElementById(
@@ -44,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedValue === 'kinematicwalk') {
       kinematicWalk();
+    }
+
+    if (selectedValue === 'kinematicreach') {
+      kinematicReach();
     }
   });
 
