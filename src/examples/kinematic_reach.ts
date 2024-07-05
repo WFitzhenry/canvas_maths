@@ -136,8 +136,8 @@ export function kinematicReach(): void {
   const height = (canvas.height = window.innerHeight);
 
   const iks = IKSystem.create(width / 2, height / 2);
-  for (let i = 0; i < 20; i++) {
-    iks.addArm(30);
+  for (let i = 0; i < 5; i++) {
+    iks.addArm(50);
   }
 
   document.body.addEventListener('mousemove', (event: MouseEvent) => {
