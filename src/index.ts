@@ -8,6 +8,7 @@ import { cancelAllAnimations } from './examples/utils';
 import { kinematicArmDrawing } from './examples/kinematic_arm_drawing';
 import { kinematicWalk } from './examples/kinematic_walk';
 import { kinematicReach } from './examples/kinematic_reach';
+import { triangle } from './examples/triangle_gl';
 
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.getElementById(
@@ -49,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedValue === 'kinematicreach') {
       kinematicReach();
+    }
+
+    if (selectedValue === 'triangle') {
+      triangle();
     }
   });
 

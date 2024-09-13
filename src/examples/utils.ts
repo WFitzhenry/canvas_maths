@@ -8,6 +8,9 @@ export function cancelAllAnimations(): void {
   const canvas2 = document.getElementById('canvas2') as HTMLCanvasElement;
   const context2 = canvas2.getContext('2d') as CanvasRenderingContext2D;
   context2.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+  const context = canvas.getContext('2d') as CanvasRenderingContext2D;
+  context.clearRect(0, 0, window.innerWidth, window.innerHeight);
   cancelAnimationLissajous();
   cancelAnimationKinematicArm();
   cancelAnimationKinematicArmDrawing();
