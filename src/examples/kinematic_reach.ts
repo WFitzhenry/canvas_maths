@@ -149,6 +149,14 @@ export function kinematicReach(): void {
   function update(): void {
     context.clearRect(0, 0, width, height);
     iks.render(context);
-    requestAnimationFrame(update);
+    animationFrameId = requestAnimationFrame(update);
+  }
+}
+
+let animationFrameId: number | null = null;
+export function cancelAnimationKinematicSnakeDrawing(): void {
+  if (animationFrameId !== null) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = null;
   }
 }
