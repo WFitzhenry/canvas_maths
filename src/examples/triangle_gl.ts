@@ -9,7 +9,7 @@ export function triangle(): void {
   }
 
   // WebGL rendering context
-  const gl = canvas.getContext('webgl');
+  const gl = canvas.getContext('webgl2');
 
   if (!gl) {
     throw new Error('Unable to initialize WebGL.');
